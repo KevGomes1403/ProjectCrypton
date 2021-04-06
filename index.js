@@ -21,7 +21,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
     let args = message.content.slice(prefix.length).split(/ +/);
-    let commandName = args.shift().toLowerCase();
+    let commandName = args[0].toLowerCase();
 
     if (!bot.commands.has(commandName)) return;
 
