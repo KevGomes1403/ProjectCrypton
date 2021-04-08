@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { API_KEY } = require('./apiconfig.json');
 const axios = require('axios').default;
 const _ = require('lodash');
 
@@ -8,7 +9,7 @@ const getQuote = (sym) => {
     try {
         return axios.get(BASE_URL + "v1/cryptocurrency/quotes/latest", {
             headers: {
-                "X-CMC_PRO_API_KEY": "a5233634-1fb5-4bea-84c6-cbaae7b4421c"
+                "X-CMC_PRO_API_KEY": API_KEY
             },
             params: {
                 "symbol": sym
