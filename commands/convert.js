@@ -25,6 +25,7 @@ module.exports = {
   name: 'convert',
   cooldown: 5,
   description: 'Converts a given cryptocurrency to another currency',
+  usage: '[amount] [ticker symbol being converted from] [ticker symbol being converted to]',
 
   execute(message, args) {
     const asyncApiCall = async (numCn, baseCn, targetCn) => {
